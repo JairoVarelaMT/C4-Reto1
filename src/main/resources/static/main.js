@@ -1,3 +1,4 @@
 $(document).ready(function(){
-    $("#loggin").hide();
+    console.log("Ready");
+    $("#mensaje_error").hide();
 })

@@ -20,19 +20,22 @@
     <title>Reto1</title>
 </head>
     <body>
+      <div class="bg"></div>
+      <div class="bg bg2"></div>
+      <div class="bg bg3"></div>
     <!--inicio de sesion-->
     <div class="container d-flex justify-content-center p-5 " id="ventana_loggin">
       <div class="row d-flex justify-content-center mt-5 mb-5 " id="loggin">
           <h2 style="text-align: center;">Iniciar sesión</h2>
           <form id="form_loggin">
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label" id="grupoEmail">Email</label>
+                <label for="exampleInputEmail1" class="form-label" id="grupoEmail"><strong>Email</strong> </label>
                 <input type="email" class="form-control" name="email" id="email"  aria-describedby="emailHelp" required>
                 <div id="emailHelp" class="form-text">Ingresa tu correo por favor.</div>
                 
               </div>
               <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <label for="exampleInputPassword1" class="form-label"><strong>Password</strong></label>
                 <input type="password" class="form-control" name="password" id="password" required>
                 <div id="emailHelp" class="form-text"> Mínimo ocho caracteres, una letra minúscula y un número.</div>
               </div>
@@ -47,16 +50,14 @@
               <div class="formulario p-5">
                 <h2 class="fs-1" style="text-align: center; color: darkorange;">REGISTRATE !</h2>
                 <form class="" id="form_registro">
-                  
-                  
+
                   <input type="email" class="form-control mt-5"  id="email2" placeholder="correo" required>
                   
-                  
                   <input type="text" class="form-control mt-3"  id="name" placeholder="Nombre" required>
-                  
+                  <span id="mensaje_error" class="mensajeError">Ingrese un nombre valido.</span>
       
                   <input type="password" class="form-control mt-3"  id="password2" placeholder="Contraseña" required>
-                  
+                  <span id="mensaje_error" class="mensajeError">Ingrese una contraseña valida.</span>
                   <span id="passwordHelpInline" class="form-text"> 
                     Must be 8-20 characters long.
                     <br>

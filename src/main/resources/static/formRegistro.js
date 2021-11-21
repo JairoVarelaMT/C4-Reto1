@@ -1,27 +1,21 @@
 
 const EXR_correo =  /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
 const form_registro = document.getElementById('form_registro');
-var email2 = document.getElementById('email');
-var password2 = document.getElementById('password');
-var name = document.getElementById('name');
-$(document).ready(function(){
-    $("#ventana_loggin").hide();
-
-})
-
+var email2 = document.getElementById('email2');
+var password2 = document.getElementById('password2');
+const nombre = document.getElementById('name');
 //Agregar el evento sudmit al boton de form loggin
 form_registro.addEventListener('submit', (event) =>{
     event.preventDefault();
         if(EXR_correo.test(email2.value)){
-            if(validarInput(password2) & validarInput(name))
+            if(validarInput(password2) & validarInput(nombre))
                 agregarUsuario();
             else
-                console.log("Password no valido");
+                alert("Password no valido");
         }
         else{
             alert("Correo no valido.");
         }
-    
 });
 
 function validarInput(valor) {
