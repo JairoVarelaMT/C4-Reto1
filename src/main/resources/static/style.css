@@ -1,0 +1,31 @@
+*{
+  font-family: 'Oswald', sans-serif;
+}
+body{
+    
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    
+}
+#loggin{
+  background-color: white;
+  width: 350px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 9px;
+  -webkit-box-shadow: 8px 8px 26px -1px rgba(0,0,0,0.59); 
+  box-shadow: 8px 8px 26px -1px rgba(0,0,0,0.59);
+}
+.formulario{
+  background-color: white;
+  width: 850px;
+  height: auto;
+  padding: 50px;
+  border-radius: 9px;
+  -webkit-box-shadow: 8px 8px 26px -1px rgba(0,0,0,0.59); 
+  box-shadow: 8px 8px 26px -1px rgba(0,0,0,0.59);
+}
+.loggin_email .loggin_label_email{
+  color: crimson;
+  opacity: 1;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+     <!--BOOTSTRAP-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+       <!--css-->
+    <link rel="stylesheet" href="./style.css">
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet"> 
+    
+    <title>Reto1</title>
+</head>
+    <body>
+    <!--inicio de sesion-->
+    <div class="container d-flex justify-content-center p-5 ">
+      <div class="row d-flex justify-content-center mt-5 mb-5 " id="loggin">
+          <h2 style="text-align: center;">Iniciar sesión</h2>
+          <form id="form_loggin">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" id="grupoEmail">Email</label>
+                <input type="email" class="form-control" name="email" id="email"  aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Ingresa tu correo por favor.</div>
+                
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="password">
+                <div id="emailHelp" class="form-text"> Mínimo ocho caracteres, una letra minúscula y un número.</div>
+              </div>
+              <button class="btn btn-success btn-lg" type="submit">Ingresar</button>
+              <div id="emailHelp" class="form-text">¿No estas registrado?<a href="">Registrate!</a></div>
+            </form>
+        </div>
+      </div>      
+    </div>      
+    <!--Formulario de registro -->
+            <div class="container d-flex justify-content-center p-5">
+              <div class="formulario p-5">
+                <h2 class="fs-1" style="text-align: center; color: darkorange;">REGISTRATE !</h2>
+                <form class="" id="form_registro">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input type="email" class="form-control" name="correo" id="email2" placeholder="ejemplo@ejemplo.com">
+                  <label for="exampleInputEmail2" class="form-label mt-3">Nombre</label>
+                  <input type="text" class="form-control" name="nombre" id="name" placeholder="Nombre">
+                  <label for="exampleInputEmail3" class="form-label mt-3">Contraseña</label>
+                  <input type="password" class="form-control" name="password2" id="password">
+                  <span id="passwordHelpInline" class="form-text"> 
+                    Must be 8-20 characters long.
+                    <br>
+                  <button class="btn btn-outline-warning mt-3 btn-lg" type="submit">Registrar</button>
+                </form>
+              </div>
+            </div>
+      <!--js-->
+      <script src="./main.js"></script>
+      <script src="./validarFormulario.js"></script>
+  
+    </body>
+</html>
