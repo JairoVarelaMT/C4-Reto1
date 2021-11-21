@@ -8,17 +8,15 @@ body{
     
 }
 #loggin{
-  background-color: white;
+ 
   width: 350px;
   height: 400px;
   padding: 10px;
-  border-radius: 9px;
-  -webkit-box-shadow: 8px 8px 26px -1px rgba(0,0,0,0.59); 
-  box-shadow: 8px 8px 26px -1px rgba(0,0,0,0.59);
+  
 }
 .formulario{
   background-color: white;
-  width: 850px;
+  width: 650px;
   height: auto;
   padding: 50px;
   border-radius: 9px;

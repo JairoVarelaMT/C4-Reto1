@@ -21,22 +21,22 @@
 </head>
     <body>
     <!--inicio de sesion-->
-    <div class="container d-flex justify-content-center p-5 ">
+    <div class="container d-flex justify-content-center p-5 " id="ventana_loggin">
       <div class="row d-flex justify-content-center mt-5 mb-5 " id="loggin">
           <h2 style="text-align: center;">Iniciar sesión</h2>
           <form id="form_loggin">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label" id="grupoEmail">Email</label>
-                <input type="email" class="form-control" name="email" id="email"  aria-describedby="emailHelp">
+                <input type="email" class="form-control" name="email" id="email"  aria-describedby="emailHelp" required>
                 <div id="emailHelp" class="form-text">Ingresa tu correo por favor.</div>
                 
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" name="password" id="password">
+                <input type="password" class="form-control" name="password" id="password" required>
                 <div id="emailHelp" class="form-text"> Mínimo ocho caracteres, una letra minúscula y un número.</div>
               </div>
-              <button class="btn btn-success btn-lg" type="submit">Ingresar</button>
+              <button class="btn btn-success btn-lg">Ingresar</button>
               <div id="emailHelp" class="form-text">¿No estas registrado?<a href="">Registrate!</a></div>
             </form>
         </div>
@@ -47,22 +47,26 @@
               <div class="formulario p-5">
                 <h2 class="fs-1" style="text-align: center; color: darkorange;">REGISTRATE !</h2>
                 <form class="" id="form_registro">
-                  <label for="exampleInputEmail1" class="form-label">Email</label>
-                  <input type="email" class="form-control" name="correo" id="email2" placeholder="ejemplo@ejemplo.com">
-                  <label for="exampleInputEmail2" class="form-label mt-3">Nombre</label>
-                  <input type="text" class="form-control" name="nombre" id="name" placeholder="Nombre">
-                  <label for="exampleInputEmail3" class="form-label mt-3">Contraseña</label>
-                  <input type="password" class="form-control" name="password2" id="password">
+                  
+                  
+                  <input type="email" class="form-control mt-5"  id="email2" placeholder="correo" required>
+                  
+                  
+                  <input type="text" class="form-control mt-3"  id="name" placeholder="Nombre" required>
+                  
+      
+                  <input type="password" class="form-control mt-3"  id="password2" placeholder="Contraseña" required>
+                  
                   <span id="passwordHelpInline" class="form-text"> 
                     Must be 8-20 characters long.
                     <br>
-                  <button class="btn btn-outline-warning mt-3 btn-lg" type="submit">Registrar</button>
+                  <button class="btn btn-outline-warning mt-3 btn-lg">Registrar</button>
                 </form>
               </div>
             </div>
       <!--js-->
       <script src="./main.js"></script>
-      <script src="./validarFormulario.js"></script>
+      <script src="./formRegistro.js"></script>
   
     </body>
 </html>
