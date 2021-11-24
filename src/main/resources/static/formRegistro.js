@@ -1,35 +1,28 @@
 
-var EXR_correo =  /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
+var EXR_correo2 =  /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
 const form_registro = document.getElementById('form_registro');
-var email2 = document.getElementById('email2');
-var password2 = document.getElementById('password2');
-const nombre = document.getElementById('name');
+var EXR_password2 = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/
+
 //Agregar el evento sudmit al boton de form loggin
 form_registro.addEventListener('submit', (event) =>{
     event.preventDefault();
-        if(EXR_correo.test(email2.value)){
-            if(validarInput(password2) & validarInput(nombre))
-                agregarUsuario();
+        if(EXR_correo2.test($('#email2').val())){
+            if(EXR_password2.test($("#password2").val()))
+                agregarUser();
             else
-                alert("Password no valido");
+                alert("Password2 no valido");
         }
         else{
-            alert("Correo no valido.");
+            alert("Correo2 no valido.");
         }
 });
 
-function validarInput(valor) {
-    let validar = true;
-    if(valor.value.length > 4){
-        return validar
-    }
-    else
-        return validar = false;
-}
-function agregarUsuario(){
+
+function agregarUser(){
     var datos = {
         email:$("#email2").val(),
         password:$("#password2").val(),
+        name:$('#name').val()
     };
       
         $.ajax({

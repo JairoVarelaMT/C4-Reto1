@@ -1,7 +1,7 @@
 
 const form_loggin = document.getElementById('form_loggin');
 var EXR_correo =  /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
-const EXR_password = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/
+var EXR_password = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/
 
 
 
@@ -22,7 +22,7 @@ form_loggin.addEventListener('submit', (event) =>{
 //SERVICIO GET PARA TRAER TODOS LOS USER DE LA BD
 function allUsers(){
     $.ajax({
-        url:"http://localhost:8080/api/User/all",
+        url:"http://localhost:8080/api/user/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
