@@ -1,8 +1,8 @@
 
 var EXR_correo2 =  /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
-const form_registro = document.getElementById('form_registro');
 var EXR_password2 = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/
 
+const form_registro = document.getElementById('form_registro');
 //Agregar el evento sudmit al boton de form loggin
 form_registro.addEventListener('submit', (event) =>{
     event.preventDefault();
@@ -16,8 +16,6 @@ form_registro.addEventListener('submit', (event) =>{
             alert("Correo2 no valido.");
         }
 });
-
-
 function agregarUser(){
     var datos = {
         email:$("#email2").val(),
