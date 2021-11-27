@@ -22,7 +22,7 @@ public class UserRepository {
     public User save(User usuario){
         return usercrudrepository.save(usuario);
     }
-    //metodo llmar por id 
+    //metodo consulta de por correo si existe o no
     public Boolean findByEmail(String email) {
         Optional<User> usuario = usercrudrepository.findByEmail(email);
         return !usuario.isEmpty();
