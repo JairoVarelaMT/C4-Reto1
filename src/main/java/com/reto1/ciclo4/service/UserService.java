@@ -21,7 +21,7 @@ public class UserService {
     public User save(User cliente){
         return userrepository.save(cliente);                         
     }
-    public Optional<User> findByEmail(String correo){
+    public Boolean findByEmail(String correo){
         return userrepository.findByEmail(correo);
     }
 }

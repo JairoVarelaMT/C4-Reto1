@@ -21,7 +21,7 @@ public class UserControlador {
         return userservice.getAll();
     }
     @GetMapping("/{email}")
-    public Optional<User> findByEmail(@PathVariable("email") String correo){
+    public Boolean findByEmail(@PathVariable("email") String correo){
         return userservice.findByEmail(correo);
     }
     @PostMapping("/new")
