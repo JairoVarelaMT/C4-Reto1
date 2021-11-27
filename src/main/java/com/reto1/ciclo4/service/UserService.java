@@ -21,7 +21,16 @@ public class UserService {
     public User save(User cliente){
         return userrepository.save(cliente);                         
     }
-    public Boolean findByEmail(String correo){
-        return userrepository.findByEmail(correo);
+    public Boolean findByEmail(String email){
+        return userrepository.findByEmail(email);
+    }
+    public User findByEmailAndPassword(String email, String password) {
+        Optional<User> usuario = userrepository.findByEmailAndPassword(email, password);
+
+        if (usuario.isEmpty()) {
+            return new User(email, password, "NO DEFINIDO");
+        } else {
+            return usuario.get();
+        }
     }
 }

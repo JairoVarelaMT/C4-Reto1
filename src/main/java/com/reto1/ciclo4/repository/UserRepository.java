@@ -23,7 +23,11 @@ public class UserRepository {
         return usercrudrepository.save(usuario);
     }
     //metodo llmar por id 
-    public Boolean findByEmail(String correo) {
-        return usercrudrepository.findByemail(correo);
+    public Boolean findByEmail(String email) {
+        Optional<User> usuario = usercrudrepository.findByEmail(email);
+        return !usuario.isEmpty();
+    }
+    public Optional<User> findByEmailAndPassword(String email , String password ){
+        return usercrudrepository.findByEmailAndPassword(email, password);
     }
 }

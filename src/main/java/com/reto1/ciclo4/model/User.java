@@ -21,6 +21,12 @@ public class User implements Serializable {
     public Integer getId() {
         return this.id;
     }
+    //constructor
+    public User(String email, String password, String name) {
+        this.email = email;
+        this.password = password;
+        this.name = name;
+    }
     public void setId(Integer id) {
         this.id = id;
     }
